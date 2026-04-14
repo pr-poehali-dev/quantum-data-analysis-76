@@ -244,9 +244,14 @@ export default function Index() {
           ))}
         </div>
 
-        <MagneticButton variant="secondary" onClick={() => scrollToSection(4)}>
-          Связаться
-        </MagneticButton>
+        <a
+          href="tel:+79277250900"
+          className="flex items-center gap-2 rounded-full border border-foreground/20 bg-foreground/10 px-4 py-2 backdrop-blur-md transition-all duration-300 hover:bg-foreground/20"
+        >
+          <span className="font-mono text-xs text-foreground/60">📞</span>
+          <span className="hidden font-sans text-sm font-medium text-foreground sm:block">+7 (927) 725-09-00</span>
+          <span className="font-sans text-sm font-medium text-foreground sm:hidden">Позвонить</span>
+        </a>
       </nav>
 
       <div
