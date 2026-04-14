@@ -219,9 +219,7 @@ export default function Index() {
           onClick={() => scrollToSection(0)}
           className="flex items-center gap-2 transition-transform hover:scale-105"
         >
-          <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-lg backdrop-blur-md transition-all duration-300 hover:scale-110">
-            <img src="https://cdn.poehali.dev/projects/7fee1099-2701-448a-a67d-aca33f55602a/files/13c41107-2db1-45cd-b815-cdf7f55df2f6.jpg" alt="Формат" className="h-full w-full object-cover" />
-          </div>
+          <img src="https://cdn.poehali.dev/projects/7fee1099-2701-448a-a67d-aca33f55602a/bucket/46517462-1b9d-4b97-aab6-cb2b82a52afe.png" alt="Формат" className="h-10 w-10 object-contain" />
           <span className="font-sans text-xl font-semibold tracking-tight text-foreground">Формат</span>
         </button>
 
