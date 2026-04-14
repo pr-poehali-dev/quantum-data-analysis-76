@@ -17,29 +17,29 @@ export function ServicesSection() {
           <h2 className="mb-2 font-sans text-5xl font-light tracking-tight text-foreground md:text-6xl lg:text-7xl">
             Услуги
           </h2>
-          <p className="font-mono text-sm text-foreground/60 md:text-base">/ Наши компетенции</p>
+          <p className="font-mono text-sm text-foreground/60 md:text-base">/ Полный спектр ритуальных услуг</p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 md:gap-x-16 md:gap-y-12 lg:gap-x-24">
           {[
             {
-              title: "Веб-разработка",
-              description: "Создание современных веб-приложений любой сложности",
+              title: "Организация похорон",
+              description: "Полное сопровождение от оформления документов до проведения церемонии прощания",
               direction: "top",
             },
             {
-              title: "UI/UX Дизайн",
-              description: "Проектирование удобных и красивых интерфейсов",
+              title: "Кремация",
+              description: "Кремация с почестями, урны для праха, захоронение в колумбарии или на кладбище",
               direction: "right",
             },
             {
-              title: "Мобильные приложения",
-              description: "Кроссплатформенная разработка для iOS и Android",
+              title: "Изготовление памятников",
+              description: "Гранитные и мраморные памятники, надгробные плиты, таблички — под заказ",
               direction: "left",
             },
             {
-              title: "Консалтинг",
-              description: "Техническая экспертиза и стратегическое планирование",
+              title: "Транспортировка",
+              description: "Перевозка усопшего по Самаре, области и межгороду — бережно и в любое время суток",
               direction: "bottom",
             },
           ].map((service, i) => (
