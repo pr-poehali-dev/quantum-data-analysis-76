@@ -34,7 +34,7 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
               style={{ transitionDelay: "200ms" }}
             >
               <p className="max-w-md text-sm leading-relaxed text-foreground/90 md:text-lg">
-                Агентство «Светлый Путь» работает в Самаре и Самарской области. Мы берём на себя все заботы — от оформления документов до организации церемонии.
+                Агентство «Формат» работает в Самаре и Самарской области. Мы берём на себя все заботы — от оформления документов до организации церемонии.
               </p>
               <p className="max-w-md text-sm leading-relaxed text-foreground/90 md:text-lg">
                 Каждая семья получает личного агента, который сопровождает на всех этапах и доступен 24 часа в сутки.
