@@ -12,20 +12,22 @@ const categories = [
 ]
 
 const products = [
-  { id: 1, category: "coffins", name: "Гроб полированный «Классик»", price: "от 8 500 ₽", image: null },
-  { id: 2, category: "coffins", name: "Гроб полированный «Премиум»", price: "от 15 000 ₽", image: null },
-  { id: 3, category: "coffins", name: "Гроб полированный «Люкс»", price: "от 25 000 ₽", image: null },
-  { id: 4, category: "crosses", name: "Крест деревянный резной", price: "от 2 000 ₽", image: null },
-  { id: 5, category: "crosses", name: "Крест металлический", price: "от 3 500 ₽", image: null },
-  { id: 6, category: "wreaths", name: "Венок «Траурный»", price: "от 1 500 ₽", image: null },
-  { id: 7, category: "wreaths", name: "Венок «Память»", price: "от 2 500 ₽", image: null },
-  { id: 8, category: "wreaths-vip", name: "Венок VIP «Элегия»", price: "от 5 000 ₽", image: null },
-  { id: 9, category: "wreaths-vip", name: "Венок VIP «Скорбь»", price: "от 7 500 ₽", image: null },
-  { id: 10, category: "baskets", name: "Корзина «Белая лилия»", price: "от 3 000 ₽", image: null },
-  { id: 11, category: "baskets", name: "Корзина «Роза»", price: "от 4 500 ₽", image: null },
-  { id: 12, category: "clothing", name: "Платье погребальное", price: "от 1 200 ₽", image: null },
-  { id: 13, category: "clothing", name: "Костюм погребальный мужской", price: "от 1 800 ₽", image: null },
-  { id: 14, category: "clothing", name: "Бельё погребальное (комплект)", price: "от 800 ₽", image: null },
+  { id: 1, category: "coffins", name: "Гроб комбинированный бордо бархат", price: "уточняйте цену", image: "https://cdn.poehali.dev/projects/7fee1099-2701-448a-a67d-aca33f55602a/bucket/e7fb7a1e-06a4-4528-9cb4-ace25f71bca3.png" },
+  { id: 2, category: "coffins", name: "Гроб комбинированный шоколад атлас", price: "уточняйте цену", image: "https://cdn.poehali.dev/projects/7fee1099-2701-448a-a67d-aca33f55602a/bucket/5c62d85c-144e-4eaa-bffc-0d468895f88f.png" },
+  { id: 3, category: "coffins", name: "Гроб социальный", price: "уточняйте цену", image: "https://cdn.poehali.dev/projects/7fee1099-2701-448a-a67d-aca33f55602a/bucket/38c5b2f4-d98e-483b-a149-7f82d51ffe1a.png" },
+  { id: 4, category: "coffins", name: "Гроб №3 вишня", price: "уточняйте цену", image: "https://cdn.poehali.dev/projects/7fee1099-2701-448a-a67d-aca33f55602a/bucket/240d166d-c95d-4e44-a325-335d1fb4cfc5.png" },
+  { id: 5, category: "coffins", name: "Гроб №3 орех", price: "уточняйте цену", image: "https://cdn.poehali.dev/projects/7fee1099-2701-448a-a67d-aca33f55602a/bucket/87d1df76-5a21-416d-913b-620fd2e9b12d.png" },
+  { id: 6, category: "crosses", name: "Крест деревянный резной", price: "уточняйте цену", image: null },
+  { id: 7, category: "crosses", name: "Крест металлический", price: "уточняйте цену", image: null },
+  { id: 8, category: "wreaths", name: "Венок «Траурный»", price: "уточняйте цену", image: null },
+  { id: 9, category: "wreaths", name: "Венок «Память»", price: "уточняйте цену", image: null },
+  { id: 10, category: "wreaths-vip", name: "Венок VIP «Элегия»", price: "уточняйте цену", image: null },
+  { id: 11, category: "wreaths-vip", name: "Венок VIP «Скорбь»", price: "уточняйте цену", image: null },
+  { id: 12, category: "baskets", name: "Корзина «Белая лилия»", price: "уточняйте цену", image: null },
+  { id: 13, category: "baskets", name: "Корзина «Роза»", price: "уточняйте цену", image: null },
+  { id: 14, category: "clothing", name: "Платье погребальное", price: "уточняйте цену", image: null },
+  { id: 15, category: "clothing", name: "Костюм погребальный мужской", price: "уточняйте цену", image: null },
+  { id: 16, category: "clothing", name: "Бельё погребальное (комплект)", price: "уточняйте цену", image: null },
 ]
 
 export function ShopSection({ scrollToContact }: { scrollToContact?: () => void }) {
@@ -85,13 +87,21 @@ export function ShopSection({ scrollToContact }: { scrollToContact?: () => void 
                 className="group flex flex-col border border-foreground/10 bg-foreground/5 backdrop-blur-sm transition-all duration-300 hover:border-foreground/25 hover:bg-foreground/10"
                 style={{ transitionDelay: `${i * 40}ms` }}
               >
-                <div className="aspect-square w-full bg-foreground/8 flex items-center justify-center border-b border-foreground/10">
-                  <div className="flex flex-col items-center gap-2 text-foreground/20">
-                    <div className="h-12 w-12 rounded-full border border-foreground/15 flex items-center justify-center">
-                      <span className="text-xl">📦</span>
+                <div className="aspect-square w-full border-b border-foreground/10 overflow-hidden bg-foreground/5">
+                  {product.image ? (
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="flex h-full w-full flex-col items-center justify-center gap-2 text-foreground/20">
+                      <div className="h-12 w-12 rounded-full border border-foreground/15 flex items-center justify-center">
+                        <span className="text-xl">📦</span>
+                      </div>
+                      <span className="font-mono text-xs">фото скоро</span>
                     </div>
-                    <span className="font-mono text-xs">фото скоро</span>
-                  </div>
+                  )}
                 </div>
                 <div className="flex flex-1 flex-col p-3 md:p-4">
                   <h3 className="mb-1 font-sans text-sm font-light leading-snug text-foreground md:text-base">
